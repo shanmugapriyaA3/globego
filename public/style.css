@@ -344,7 +344,7 @@ h2 {
 
 
   .top {
-    width: 90px;
+    width: 95px;
     height: 100px;
 
 
@@ -355,7 +355,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 20p;
+   
    
   }
 
