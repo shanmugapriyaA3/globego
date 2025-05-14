@@ -355,7 +355,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 10px;
+    margin-left: 10p;
    
   }
 
@@ -366,4 +366,56 @@ h2 {
     flex-wrap: wrap;
     margin-top: 60px;
   }
+  .feedback-section {
+  padding: 40px;
+  text-align: center;
+  border: 1px black solid;
+}
+
+.feedback-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.feedback-form {
+  display: inline-block;
+  text-align: left;
+  max-width: 400px;
+  width: 90%;
+  padding: 6px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 90%;
+  padding: 6px;
+  margin-bottom: 15px;
+  background-color: rgb(192, 234, 248);
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  margin-left: 1px;
+}
+
+.feedback-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.feedback-form button {
+  width: 90%;
+  padding: 6px;
+  background-color: #0717fc;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #0056b3;
+  
+}
 }
