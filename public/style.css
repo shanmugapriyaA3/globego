@@ -234,6 +234,18 @@ h2 {
   color: black;
 }
 
+.contdetails p a{
+  color: black;
+  font-weight: 100;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+.contdetails{
+  text-align: center;
+}
+
+
 @media only screen and (max-width: 600px) {
   body {
     background-position: center;
@@ -242,7 +254,7 @@ h2 {
   }
 
   .top-bar {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     padding: 15px 20px;
   }
@@ -251,7 +263,13 @@ h2 {
     font-size: 24px;
     margin-bottom: 10px;
   }
-
+.top-bar {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  padding: 20px ;
+}
   .nav-links {
     display: flex;
     flex-direction: column;
@@ -275,9 +293,7 @@ h2 {
     width: 80%;
   }
 
-  .feedback-section {
-    padding: 20px;
-  }
+  
 
   .feedback-form {
     width: 100%;
@@ -358,8 +374,28 @@ h2 {
    
    
   }
-
-
+.logo {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(105, 153, 255);
+}
+.nav-links  {
+  color: white;
+  text-decoration: none;
+  font-weight: 90;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nav-links a{
+  font-size: 8px;
+}
+.hero {
+  color: rgb(24, 22, 22);
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(160, 158, 158);
+}
   .main-content {
     display: flex;
     flex-direction: column;

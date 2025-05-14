@@ -143,12 +143,29 @@ router.get('/contact', (req, res) => res.render('contact'));
 router.post('/feedback', (req, res) => {
   const { name, message } = req.body;
   console.log({ name, message });
-  res.send('Feedback submitted successfully!');
+  res.send('Form submitted successfully!');
 });
 
 router.get('/logout', (req, res) => {
   res.clearCookie('token');
   res.redirect('/login');
 });
+
+
+// Instagram route - redirects to Instagram profile
+router.get('/instagram', (req, res) => {
+  res.redirect('https://www.instagram.com/globego');
+});
+
+// Email route - opens mail client via redirect (optional)
+router.get('/email', (req, res) => {
+  res.redirect('mailto:globego@gmail.com');
+});
+
+// Phone route - opens dialer (works mainly on mobile)
+router.get('/phone', (req, res) => {
+  res.redirect('tel:+1234567890');
+});
+
 
 module.exports = router;
