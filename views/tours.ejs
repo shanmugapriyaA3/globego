@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="hero">
+    <h2>World Tour Destinations</h2>
+    <p>Explore stunning places across the globe</p>
+  </div>
+
+  <!-- Tour categories -->
+  <div class="tour-container">
+    <div class="category-title">Europe</div>
+    <div class="tour-gallery">
+      <div class="tour-card">
+        <img src="/images/paris.jpg" alt="Paris">
+        <h3>Paris, France</h3>
+      </div>
+      <div class="tour-card">
+        <img src="/images/rome.jpg" alt="Rome">
+        <h3>Rome, Italy</h3>
+      </div>
+      <div class="tour-card">
+        <img src="/images/london.jpg" alt="London">
+        <h3>London, UK</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="tour-container">
+    <div class="category-title">Asia</div>
+    <div class="tour-gallery">
+      <div class="tour-card">
+        <img src="/images/tokyo.jpg" alt="Tokyo">
+        <h3>Tokyo, Japan</h3>
+      </div>
+      <div class="tour-card">
+        <img src="/images/bali.jpg" alt="Bali">
+        <h3>Bali, Indonesia</h3>
+      </div>
+      <div class="tour-card">
+        <img src="/images/dubai.jpg" alt="Dubai">
+        <h3>Dubai, UAE</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="tour-container">
+    <div class="category-title">America</div>
+    <div class="tour-gallery">
+      <div class="tour-card">
+        <img src="/images/new york.jpg" alt="New York">
+        <h3>New York, USA</h3>
+      </div>
+      <div class="tour-card">
+        <img src="/images/rio de janeiro.jpg" alt="Rio">
+        <h3>Rio de Janeiro, Brazil</h3>
+      </div>
+      <div class="tour-card">
+        <img src="/images/toronto.jpg" alt="Toronto">
+        <h3>Toronto, Canada</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- User's Travel Todo List -->
+  <div class="tour-list">
+    <div class="category-title">Your Travel List</div>
+
+    <!-- Add todo form -->
+    <form action="/tours/add" method="POST">
+    <input type="text" name="place" placeholder="Enter a place" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    <% todos.forEach(todo => { %>
+      <li>
+        <form action="/tours/update" method="POST" style="display:inline;">
+          <input type="hidden" name="id" value="<%= todo.id %>">
+          <input type="text" name="task" value="<%= todo.task %>">
+          <button type="submit">Update</button>
+        </form>
+        <form action="/tours/delete" method="POST" style="display:inline;">
+          <input type="hidden" name="id" value="<%= todo.id %>">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

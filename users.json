@@ -1,0 +1,18 @@
+[
+  {
+    "username": "admin",
+    "password": "$2b$10$LJhPhU6.Sb0zYXVueMEk6OGNRARXMvDmefwsFTzR7c1qYSkmmvBy."
+  },
+  {
+    "username": "kamali",
+    "password": "$2b$10$lc5c1cQL8BBLAquTzP6AqO07sPRt0JLHjKL2ulGF3CgSMKBPjWA.m"
+  },
+  {
+    "username": "cars",
+    "password": "$2b$10$96MYjafxX1wxXmeN7YORA.SFWUiuOquaS5LbQ7MYgugiJMMJYXbhO"
+  },
+  {
+    "username": "meena",
+    "password": "$2b$10$qIUsiwSdoYIsjcGB4jP8nOy9x5SFHrEf64G9wWscQ2hITZi6mgKv."
+  }
+]
