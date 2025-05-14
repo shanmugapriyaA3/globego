@@ -13,7 +13,7 @@ const todosFile = path.join(__dirname, 'todos.json');
 router.use(express.urlencoded({ extended: true }));
 router.use(cookieParser());
 
-// Load users
+
 function loadUsers() {
   try {
     if (!fs.existsSync(usersFile)) fs.writeFileSync(usersFile, '[]');
@@ -24,12 +24,12 @@ function loadUsers() {
   }
 }
 
-// Save users
+
 function saveUsers(users) {
   fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
 }
 
-// Load todos
+
 function loadTodos() {
   try {
     if (!fs.existsSync(todosFile)) fs.writeFileSync(todosFile, '[]');
@@ -40,18 +40,18 @@ function loadTodos() {
   }
 }
 
-// Save todos
+
 function saveTodos(todos) {
   fs.writeFileSync(todosFile, JSON.stringify(todos, null, 2));
 }
 
-// Get the next available ID
+
 function getNextTodoId(todos) {
   const ids = todos.map(t => t.id);
   return ids.length > 0 ? Math.max(...ids) + 1 : 1;
 }
 
-// Authentication middleware
+
 function authenticateToken(req, res, next) {
   const token = req.cookies.token;
   if (!token) return res.redirect('/login');
