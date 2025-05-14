@@ -388,7 +388,7 @@ h2 {
   flex-wrap: wrap;
 }
 .nav-links a{
-  font-size: 8px;
+  font-size: 6px;
 }
 .hero {
   color: rgb(24, 22, 22);
@@ -453,5 +453,17 @@ h2 {
 .feedback-form button:hover {
   background-color: #0056b3;
   
+}
+
+.tour-list form input {
+  width: 50%;
+  height: 4px;
+}
+
+.tour-list form button {
+  width: 15%;
+  height: 15px;
+  font-size: 10px;
+  padding: 2px;
 }
 }
