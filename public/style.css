@@ -375,7 +375,7 @@ h2 {
    
   }
 .logo {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: rgb(105, 153, 255);
 }
@@ -388,7 +388,7 @@ h2 {
   flex-wrap: wrap;
 }
 .nav-links a{
-  font-size: 6px;
+  font-size: 5px;
 }
 .hero {
   color: rgb(24, 22, 22);
